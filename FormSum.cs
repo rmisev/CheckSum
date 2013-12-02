@@ -18,11 +18,38 @@ namespace CheckSum
             HashAlgorithmsCollection.Init();
             
             InitializeComponent();
+            // drag & drop
+            this.textBoxFile.AllowDrop = true;
+            this.textBoxFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBox_DragDrop);
+            this.textBoxFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox_DragEnter);
+            // hash algorithms
             foreach (string key in HashAlgorithmsCollection.Dic.Keys)
             {
                 this.comboBoxAlgoritmas.Items.Add(key);
             }
             this.comboBoxAlgoritmas.SelectedIndex = 0;
+        }
+
+        // http://stackoverflow.com/questions/1370538/drag-files-or-folders-in-textbox-c-sharp
+        private void textBox_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void textBox_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] fileNames = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            if (fileNames.Length == 1)
+            {
+                TextBox textBox = sender as TextBox;
+                if (textBox != null)
+                    textBox.Text = fileNames[0];
+            }
+            else
+                MessageBox.Show("Meskite tik vieną failą!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
