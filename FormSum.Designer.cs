@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSum));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFile = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,97 +42,61 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Failas:";
             // 
             // textBoxFile
             // 
-            this.textBoxFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFile.Location = new System.Drawing.Point(15, 25);
+            resources.ApplyResources(this.textBoxFile, "textBoxFile");
             this.textBoxFile.Name = "textBoxFile";
-            this.textBoxFile.Size = new System.Drawing.Size(557, 20);
-            this.textBoxFile.TabIndex = 1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Algoritmas:";
             // 
             // comboBoxAlgoritmas
             // 
-            this.comboBoxAlgoritmas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.comboBoxAlgoritmas, "comboBoxAlgoritmas");
             this.comboBoxAlgoritmas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAlgoritmas.FormattingEnabled = true;
-            this.comboBoxAlgoritmas.Location = new System.Drawing.Point(12, 64);
             this.comboBoxAlgoritmas.Name = "comboBoxAlgoritmas";
-            this.comboBoxAlgoritmas.Size = new System.Drawing.Size(520, 21);
-            this.comboBoxAlgoritmas.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(538, 62);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Skaičiuoti";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 88);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Kontrolinė suma:";
             // 
             // textBoxSum
             // 
-            this.textBoxSum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSum.Location = new System.Drawing.Point(15, 104);
-            this.textBoxSum.Multiline = true;
+            resources.ApplyResources(this.textBoxSum, "textBoxSum");
             this.textBoxSum.Name = "textBoxSum";
             this.textBoxSum.ReadOnly = true;
-            this.textBoxSum.Size = new System.Drawing.Size(598, 80);
-            this.textBoxSum.TabIndex = 6;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.AddExtension = false;
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Visi failai|*.*";
-            this.openFileDialog1.Title = "Pasirinkite failą";
+            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
             // buttonBrowse
             // 
-            this.buttonBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBrowse.Location = new System.Drawing.Point(578, 23);
+            resources.ApplyResources(this.buttonBrowse, "buttonBrowse");
             this.buttonBrowse.Name = "buttonBrowse";
-            this.buttonBrowse.Size = new System.Drawing.Size(35, 23);
-            this.buttonBrowse.TabIndex = 7;
-            this.buttonBrowse.Text = "...";
             this.buttonBrowse.UseVisualStyleBackColor = true;
             this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
             // 
             // FormSum
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 197);
             this.Controls.Add(this.buttonBrowse);
             this.Controls.Add(this.textBoxSum);
             this.Controls.Add(this.label3);
@@ -141,7 +106,6 @@
             this.Controls.Add(this.textBoxFile);
             this.Controls.Add(this.label1);
             this.Name = "FormSum";
-            this.Text = "Kontrolinė suma";
             this.ResumeLayout(false);
             this.PerformLayout();
 

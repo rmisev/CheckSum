@@ -55,6 +55,9 @@
     <Compile Include="HashAlgorithmsCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormSum.lt.resx">
+      <DependentUpon>FormSum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSum.resx">
       <DependentUpon>FormSum.cs</DependentUpon>
     </EmbeddedResource>
