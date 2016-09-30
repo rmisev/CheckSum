@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CheckSum")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Windows User")]
+[assembly: AssemblyCompany("Rimas Misevičius")]
 [assembly: AssemblyProduct("CheckSum")]
-[assembly: AssemblyCopyright("Copyright © Windows User 2011")]
+[assembly: AssemblyCopyright("Copyright © Rimas Misevičius 2011 - 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
