@@ -307,10 +307,10 @@
     <value>17, 17</value>
   </metadata>
   <data name="openFileDialog1.Filter" xml:space="preserve">
-    <value>Visi failai|*.*</value>
+    <value>All Files|*.*</value>
   </data>
   <data name="openFileDialog1.Title" xml:space="preserve">
-    <value>Pasirinkite failą</value>
+    <value>Open</value>
   </data>
   <data name="buttonBrowse.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
