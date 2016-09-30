@@ -49,7 +49,7 @@ namespace CheckSum
                     textBox.Text = fileNames[0];
             }
             else
-                MessageBox.Show("Meskite tik vieną failą!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Properties.Resources.WarnDropOneFile, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
